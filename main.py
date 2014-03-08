@@ -122,7 +122,6 @@ def main(options, arguments):
 
 def start_analysis(apk_file_list, analysis_results):
     while apk_file_list:
-        # Start thread
         apk_file = apk_file_list.pop()
         analyzer = Analyzer(apk_file, analysis_results)
         analyzer.run()
@@ -131,7 +130,6 @@ def store_results(output_file, analysis_results):
     # Analysis done
     sorted_permissions = sorted(analysis_results['permissions'].items(), key=lambda item:item[1], reverse=True)
     sorted_features= sorted(analysis_results['features'].items(), key=lambda item:item[1], reverse=True)
-    print sorted_permissions
     
     try:
         output = open(output_file, 'w')
