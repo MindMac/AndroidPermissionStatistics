@@ -1,6 +1,6 @@
-PermissionFeatureStatistics
+AndroidPermissionStatistics
 =========
-Make a statistics of permission and features used by APKs.
+Make a statistics of permission and features used by Android APKs.
 ====================================================
 
 
