@@ -69,7 +69,6 @@ class Analyzer():
             if len(features_name) > 0:
                 package_name = apk.get_package()
                 features_used = apk.get_elements('uses-feature', 'android:required')
-                print '% s features' % self.apk_file, features_name, features_used
                 for i in xrange(len(features_name)):
                     if features_name[i] != '':
                         if(features_used[i] != '%s.false' % package_name):
